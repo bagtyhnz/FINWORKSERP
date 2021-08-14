@@ -15,26 +15,22 @@ import java.util.List;
 
 public abstract class  BasePage {
 
-    @FindBy(className="oe_topbar_name")
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/ol/li']")
+    public WebElement pageSubTitle;
+
+    @FindBy(css = "[class= o_loading]")
+    @CacheLookup
+    protected WebElement loaderMask;
+
+    @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement userName;
 
     @FindBy(linkText = "Log out")
     public WebElement logOutLink;
 
-    @FindBy(css = "span.title-level-1")
-    public List<WebElement> menuOptions;
-
-    @FindBy(css = "div[class='loader-mask shown']")
-    @CacheLookup
-    protected WebElement loaderMask;
-
-    @FindBy(css = "h1[class='oro-subtitle']")
-    public WebElement pageSubTitle;
-
-
-
-    @FindBy(linkText = "My User")
+    @FindBy(linkText = "o_user_menu open")
     public WebElement myUser;
+
 
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
