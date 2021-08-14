@@ -1,7 +1,7 @@
 @logout
   Feature: log out
 
-      Scenario Outline: all types of users can logout
+      Scenario Outline: <userType> users can logout
 
         Given the <userType> is logged in
         When the user clicks the logout button

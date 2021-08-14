@@ -4,7 +4,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.InboxPage;
+import pages.BasePage;
+import pages.DashboardPage;
 import pages.LoginPage;
 import utilities.BrowserUtils;
 import utilities.ConfigurationReader;
@@ -22,8 +23,8 @@ public class LogoutStepDefs {
 
     @When("the user clicks the logout button")
     public void the_user_clicks_the_logout_button() {
-       BrowserUtils.waitForPageToLoad(5);
-        new InboxPage().logout();
+       BrowserUtils.waitForPageToLoad(3);
+       new DashboardPage().logOut();
     }
 
     @Then("the user should be logged out")

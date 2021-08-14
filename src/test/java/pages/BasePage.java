@@ -15,6 +15,12 @@ import java.util.List;
 
 public abstract class  BasePage {
 
+    @FindBy(className="oe_topbar_name")
+    public WebElement userName;
+
+    @FindBy(linkText = "Log out")
+    public WebElement logOutLink;
+
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
 
@@ -25,11 +31,7 @@ public abstract class  BasePage {
     @FindBy(css = "h1[class='oro-subtitle']")
     public WebElement pageSubTitle;
 
-    @FindBy(css = "#user-menu > a")
-    public WebElement userName;
 
-    @FindBy(linkText = "Logout")
-    public WebElement logOutLink;
 
     @FindBy(linkText = "My User")
     public WebElement myUser;

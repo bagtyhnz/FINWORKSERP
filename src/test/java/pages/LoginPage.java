@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 
-    public class LoginPage {
+    public class LoginPage extends BasePage{
 
         public LoginPage(){
             PageFactory.initElements(Driver.get(), this);
