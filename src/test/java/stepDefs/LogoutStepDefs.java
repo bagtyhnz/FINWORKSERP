@@ -13,6 +13,7 @@ import utilities.Driver;
 
 public class LogoutStepDefs {
 
+    //here is my comment from github to make a change in you source code. chose what you want do do wit it
     @Given("the Sales Manager is logged in")
     public void the_Sales_Manager_is_logged_in() {
 
